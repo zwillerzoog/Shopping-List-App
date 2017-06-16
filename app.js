@@ -21,35 +21,19 @@ let appState = {
 
 		// run new render 
 	}
-	addListItem(appState, "oranges");
-	console.log(appState);
-	//Toggleclass for .shopping-item__checked 
-
-	function checkToggle() {
-		$('button.shopping-item-toggle').click(
-			function(event) {
-				$(event.target).closest('li').children('span').toggleClass('shopping-item__checked');
-			}
-		);
-	}
-	checkToggle();
 
 	//Somehow delete the whole food div
 
 	function deleteItem(state, item) {
-		//const targetIndex = state.items.indexOf(item);
 		let currentItem = ;
 		state.items.splice(currentItem, 1);
-
-		//splice(targetIndex, 1);
 	}
+
 	function handleItemDeletes(listElem, itemElem){
 		// does the list elem have a length?
 		// can you use that to find the item at the same
 		// position in the state?
 	}
-
-	// separation of concerns
 
 	// const item1 = {
 	// 	name: 'apple', 
@@ -72,6 +56,14 @@ let appState = {
 //3. Render Functions
 
 	//Function(s) that happen when you clicked
+
+	function checkToggle() {
+		$('button.shopping-item-toggle').click(
+			function(event) {
+				$(event.target).closest('li').children('span').toggleClass('shopping-item__checked');
+			}
+		);
+	}
 
 //4. Event listener
 
