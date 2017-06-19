@@ -109,7 +109,7 @@
 //Check click function
 
 	function checkToggle() {
-		$('.shopping-list').on("click", ".shopping-item-delete",
+		$('.shopping-list').on("click", ".shopping-item-toggle",
 			function(event) {
 				$(event.target).closest('li').children('span').toggleClass('shopping-item__checked');
 			}
@@ -121,7 +121,8 @@
 //Delete function
 
 	function deleteItem() {
-		$("button.shopping-item-delete").click(function(event) {
+		$(".shopping-list").on("click", ".shopping-item-delete",
+			function(event) {
 			$(event.currentTarget).closest("li").remove();
 			console.log("hey bud");
 		})
